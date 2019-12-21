@@ -20,3 +20,7 @@ def registerDisp(request):
         "form": form
     }
     return render(request, "", context=context)
+
+def index(request):
+    context = {}
+    return render(request, 'default/login.html', context=context)

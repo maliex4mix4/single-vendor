@@ -10,12 +10,10 @@
 	<link rel="stylesheet" href="{% static 'minify/bootstrap.min.css' %}" type="text/css">
 	<link rel="stylesheet" href="{% static 'minify/font-awesome.min.css' %}" type="text/css">
 
-	<link rel="shortcut icon" href="images/logo.png">
-
-	<script src="{% static 'minify/jquery.min.js' %}"></script>
-	<script src="{% static 'minify/materialize.js' %}"></script>
-	<script src="{% static 'minify/bootstrap.bundle.min.js' %}"></script>
-	<title>SingleVendor - {% block title %}{% endblock %}</title>
+	<title>SingleVendor - 
+	{% block title %}
+	{% endblock %}
+	</title>
 </head>
 <body>
 	<header>
@@ -36,5 +34,8 @@
 		{% block footer %}
 		{% endblock %}
 	</footer>
+	<script src="{% static 'minify/jquery.min.js' %}"></script>
+	<script src="{% static 'minify/materialize.js' %}"></script>
+	<script src="{% static 'minify/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
