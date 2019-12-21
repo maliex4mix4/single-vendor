@@ -1,0 +1,13 @@
+Extra tools to add
+	- User tracking:
+		know what your users buy most & when they buy
+	- Import system
+		to automatically add products from an import file when moving from localhost to website
+	- Review System
+		both at the vendor's end ( Reviews Management ) and the buyer's end ( Product Verification & Reviewing )
+	- Report & Data System
+		complex system that reviews the market place and make better rcommendations
+	- Notification System
+		email & sms notification for new products, discounts & features
+	- Realt-time Chat System
+		ability to chat with bot (24/7) or customer care in real-time

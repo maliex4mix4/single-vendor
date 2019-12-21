@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden; scroll-behavior: smooth;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<link rel="stylesheet" href="{% static 'minify/materialize.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'minify/bootstrap.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'minify/font-awesome.min.css' %}" type="text/css">
+
+	<link rel="shortcut icon" href="images/logo.png">
+
+	<script src="{% static 'minify/jquery.min.js' %}"></script>
+	<script src="{% static 'minify/materialize.js' %}"></script>
+	<script src="{% static 'minify/bootstrap.bundle.min.js' %}"></script>
+	<title>SingleVendor - {% block title %}{% endblock %}</title>
+</head>
+<body>
+	<header>
+		{% block navbar %}
+		{% endblock %}
+	</header>
+	<content>
+		<section>
+			{% block sidebar %}
+			{% endblock %}
+		</section>
+		<section>
+			{% block content %}
+			{% endblock %}
+		</section>
+	</content>
+	<footer>
+		{% block footer %}
+		{% endblock %}
+	</footer>
+</body>
+</html>
