@@ -1,0 +1,11 @@
+ - User Account System : dealing with login, registeration, email verification and password reset
+ 
+ - Search & Ordering System : searching and ordering of products based on some defined properties
+ 
+ - Cart System : ability to add to user cart and view prodcuts from cart
+
+ - Payment System - order for goods online, probably completed using paystack payment api
+
+ - Discount System - ability to add discount rules and using them to reduce price when & where
+                     necessary
+ - Admin Actions - admin panel to control all mentioned activities
