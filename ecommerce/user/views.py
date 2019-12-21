@@ -10,7 +10,7 @@ def loginDisp(request):
     context = {
         "form": form
     }
-    return render(request, "", context=context)
+    return render(request, "default/login.html", context=context)
 
 def registerDisp(request):
     form = RegisterForm(request.POST or None)
@@ -23,4 +23,4 @@ def registerDisp(request):
 
 def index(request):
     context = {}
-    return render(request, 'default/login.html', context=context)
+    return render(request, 'default/index.html', context=context)

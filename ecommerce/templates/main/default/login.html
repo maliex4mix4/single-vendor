@@ -1,5 +1,5 @@
-{% load static %}
 {% extends "default/base.html" %}
+{% load static %}
 {% block  title %}Login{% endblock %}
 
 {% block content %}
@@ -18,9 +18,7 @@
 					<span>Welcome back!! Login to Your Account</span>
 				</div>
 				<div class="border-bottom border-top p-3">
-					<input type="text" name="login" placeholder="Username" class="browser-default form-control form-control-lg" required value="##login.login##">
-					<br/>
-					<input type="password" name="pass" placeholder="Password" class="browser-default form-control form-control-lg" required value="##login.pass##">
+					{{ form }}
 				</div>
 				<div class="p-3">
 					<input type="checkbox" name="atl" value="1" class="browser-default mr-1" style="display: inline;opacity: 1;pointer-events: unset;position: static;"> Remember Me?
