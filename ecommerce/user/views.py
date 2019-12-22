@@ -6,7 +6,7 @@ from .forms import LoginForm, RegisterForm
 def loginDisp(request):
     form = LoginForm(request.POST or None)
     if form.is_valid():
-        return True
+        form.save()
     context = {
         "form": form
     }

@@ -7,7 +7,6 @@ class LoginForm(forms.Form):
         model = Users
         fields = [
             'email',
-            'telephone',
             'password'
         ]
 

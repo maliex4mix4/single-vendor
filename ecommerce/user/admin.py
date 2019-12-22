@@ -4,4 +4,4 @@ from django.contrib import admin
 from .models import Users, Cart
 
 admin.site.register(Users)
-#admin.site.register(Cart)
+admin.site.register(Cart)
