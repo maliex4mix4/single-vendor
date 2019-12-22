@@ -1,4 +1,4 @@
-{% extends "registration/base.html" %}
+{% extends "default/base.html" %}
 {% load static %}
 {% block  title %}Login{% endblock %}
 {% block content %}
@@ -8,13 +8,18 @@
 		<form method="post" class="d-block mx-5 w-100" action="" style="max-width: 350px">
 			{% csrf_token %}
 
+			{% if form.errors %}
+				<div id="login-message" class="alert alert-danger mb-4 red lighten-4">Incorrect username or password.</div>
+			{% endif %}
 			<div class="bg-white rounded border w-100">
 				<div class="p-3">
 					<h4>Single Vendor</h4>
 					<span>Welcome back!! Login to Your Account</span>
 				</div>
 				<div class="border-bottom border-top p-3">
-					{{ form.as_p }}
+					<input type="text" name="login" placeholder="Username" class="browser-default form-control form-control-lg" required value="{{ form.email }}">
+					<br/>
+					<input type="password" name="pass" placeholder="Password" class="browser-default form-control form-control-lg" required value="{{ form.password }}">
 				</div>
 				<div class="p-3">
 					<input type="checkbox" name="atl" value="1" class="browser-default mr-1" style="display: inline;opacity: 1;pointer-events: unset;position: static;"> Remember Me?

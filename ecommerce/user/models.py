@@ -2,7 +2,7 @@ from django.db import models
 ##from datetime import datetime
 
 # Create your models here.
-class Users(models.Model):
+class Users (models.Model):
     id = models.IntegerField(primary_key=True, auto_created=True)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
