@@ -1,0 +1,340 @@
+{% extends "default/base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+	<form action="" method="post" onsubmit="return VerifyForm(this);" class="position-fixed h-100 w-100 d-flex align-items-center justify-content-center" style="top: 0; background: #e8e4c9;" autocomplete="off">
+		<div class="p-4 p-md-5 w-100 form-step" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					Email Address
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<input type="email" name="email" class="my-5 w-100" style="font-size: x-large;" placeholder="Email" data-storage="email" />
+
+			<ul class="browser-default" type="bullet">
+				<li>minimum of 6, maximum of 35 characters</li>
+				<li>accepts alphanumeric and (<b>.</b>) (<b>_</b>) (<b>-</b>) characters</li>
+			</ul>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					Password
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<input type="password" name="password" class="my-5 w-100" style="font-size: x-large;" placeholder="Password" />
+
+			<ul class="browser-default" type="bullet">
+				<li>minimum of 6, maximum of 16 characters</li>
+				<li>accepts alphanumeric and symbollic characters</li>
+			</ul>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					Password Confirmation
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<input type="password" name="cpassword" class="my-5 w-100" style="font-size: x-large;" placeholder="Confirm Password" />
+
+			<ul class="browser-default" type="bullet">
+				<li>minimum of 6, maximum of 16 characters</li>
+				<li>must tally with previous password</li>
+				<li>accepts alphanumeric and symbollic characters</li>
+			</ul>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					First Name
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<input type="text" name="first_name" class="my-5 w-100" style="font-size: x-large;" placeholder="First Name" />
+
+			<ul class="browser-default" type="bullet">
+				<li>minimum of 3, maximum of 10 characters</li>
+				<li>accepts alphanetic characters</li>
+			</ul>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					Last Name
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<input type="text" name="last_name" class="my-5 w-100" style="font-size: x-large;" placeholder="Last Name" />
+
+			<ul class="browser-default" type="bullet">
+				<li>minimum of 3, maximum of 10 characters</li>
+				<li>accepts alphabetic characters</li>
+			</ul>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					Gender Selection
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<div class="d-flex justify-content-center mt-5">
+				<div class="text-center white border p-4 mr-2" style="border-radius: 10px; width: 150px;">
+					<input type="radio" name="gender" checked value="1" class="browser-default position-static mb-3" style="pointer-events: unset; opacity: 1;" />
+					<h4>Male</h4>
+				</div>
+				<div class="text-center white border p-4 ml-2" style="border-radius: 10px; width: 150px;">
+					<input type="radio" name="gender" value="0" class="browser-default position-static mb-3" style="pointer-events: unset; opacity: 1;" />
+					<h4>Female</h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none" style="max-width: 600px;">
+			<div class="d-flex justify-content-between">
+				<h2>
+					Telephone Number
+				</h2>
+				<h5>
+					<b>
+						<font color="red">*</font> required
+					</b>
+				</h5>
+			</div>
+
+			<input type="tel" name="telephone" class="my-5 w-100" style="font-size: x-large;" placeholder="Telephone" />
+
+			<ul class="browser-default" type="bullet">
+				<li>minimum of 11, maximum of 15 characters</li>
+				<li>accepts numeric characters</li>
+			</ul>
+		</div>
+
+		<div class="p-4 p-md-5 w-100 form-step d-none text-center" style="max-width: 600px;">
+			<h5 class="my-5">
+				<input type="checkbox" name="terms" class="browser-default position-static mb-4" style="opacity: 1; pointer-events: unset; transform: scale(2); padding: 10px;" value="1" autocomplete="off" required />
+				<br/>
+				do you agree to SingleVendor's <a href="">terms, conditions and policies</a> of use ?
+			</h5>
+
+			<button type="submit" class="btn red btn-large btn-lg waves-effect white-text">
+				FINISH REGISTER
+			</button>
+		</div>
+	</form>
+
+	<div class="counter position-fixed w-100 text-center mt-4 mt-md-5" style="top: 0;">
+		<h4>
+			STEP <font id="currentStep">1</font>/8
+		</h4>
+	</div>
+
+	<div class="button position-fixed w-100 text-center mb-4 mb-md-5" style="bottom: 0;">
+		<a onclick="nextStep();">
+			NEXT<br/>
+			<i class="fa fa-chevron-down mt-3"></i>
+		</a>
+	</div>
+
+	<div class="button position-fixed w-100" style="top: 0; margin-left: 10%; margin-top: 10%;">
+		<a onclick="prevStep();" class="d-inline-block">
+			<strong style="font-size: xx-large;">&leftarrow;</strong>
+		</a>
+	</div>
+
+	<div class="position-fixed h-100 red align-items-center justify-content-center d-flex" style="width: 5%; max-width: 40px; top: 0;">
+		<pre class="font-weight-bold" style="font-size: medium;">&copy;
+S
+i
+n
+g
+l
+e
+V
+e
+n
+d
+o
+r
+
+2
+0
+1
+9</pre>
+	</div>
+
+	<style type="text/css">
+		.form-step input:not([type=radio]):not([type=checkbox]) {
+		    border-bottom: 1px solid #271F1F !important;
+		    box-shadow: 0 1px 0 0 #271F1F !important;
+		}
+		.form-step input:not([type=radio]):not([type=checkbox]):focus {
+		    border-bottom: 1px solid #FE249A !important;
+		    box-shadow: 0 1px 0 0 #FE249A !important;
+		}
+		.form-step input:not([type=radio]):not([type=checkbox]).invalid {
+		    border-bottom: 1px solid #F44336 !important;
+		    box-shadow: 0 1px 0 0 #F44336 !important;
+		}
+		.form-step input:not([type=radio]):not([type=checkbox]).valid {
+		    border-bottom: 1px solid #4BB543 !important;
+		    box-shadow: 0 1px 0 0 #4BB543 !important;
+		}
+		.button a:hover {
+			cursor: pointer;
+			transform: scale(1.1);
+			transition: scale;
+			-webkit-transition: scale;
+		}
+		.form-step:not(.d-none) {
+			animation: slideDown .3s ease-in;
+			-webkit-animation: slideDown .2s ease-in;
+		}
+		.form-step.prev:not(.d-none) {
+			animation: slideLeft .3s ease-in;
+			-webkit-animation: slideLeft .2s ease-in;
+		}
+
+		@keyframes slideLeft {
+			from {
+				transform: translateX(150%);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		@-webkit-keyframes slideLeft {
+			from {
+				transform: translateX(150%);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		@keyframes slideDown {
+			from {
+				transform: translateY(-150%);
+			}
+			to {
+				transform: translateY(0);
+			}
+		}
+
+		@-webkit-keyframes slideDown {
+			from {
+				transform: translateY(-150%);
+			}
+			to {
+				transform: translateY(0);
+			}
+		}
+	</style>
+
+	<script>
+
+		currentStep = 0;
+		formSteps = $('.form-step');
+
+		function nextStep(){
+			currentStep++;
+			if( currentStep < formSteps.length ){
+				formSteps.addClass('d-none');
+				formSteps.removeClass('prev');
+				formSteps[currentStep].classList.toggle('d-none');
+				$('#currentStep').html(currentStep+1);
+			} else {
+				currentStep = formSteps.length-1;
+			}
+		}
+
+		function prevStep(){
+			currentStep--;
+			if( currentStep >= 0 ){
+				formSteps.addClass('d-none');
+				formSteps[currentStep].classList.toggle('d-none');
+				formSteps[currentStep].classList.toggle('prev');
+				$('#currentStep').html(currentStep+1);
+			} else {
+				currentStep = 0;
+			}
+		}
+
+		function VerifyForm( el ){
+			_return = true;
+			patterns = {
+				'email': '[a-zA-Z0-9@_.\-]{6,35}',
+				'password': '[^\'"]{6,16}',
+				'first_name': '[a-zA-Z -]{3,10}',
+				'last_name': '[a-zA-Z -]{3,10}',
+				'telephone': '(?:\\(+?\d{1,3}\\))?\d{8,11}'
+			};
+
+			for( x in patterns ){
+				if( new RegExp(patterns[x]).test(el.elements[x].value) ){
+					_return = _return && true;
+					el.elements[x].classList.add('valid');
+					el.elements[x].classList.remove('invalid');
+				} else {
+					_return = false;
+					el.elements[x].classList.add('invalid');
+					el.elements[x].classList.remove('valid');
+				}
+			}
+
+			if( !el.elements.cpassword.value || el.elements.cpassword.value != el.elements.password.value ){
+				el.elements.cpassword.classList.add('invalid');
+				el.elements.cpassword.classList.remove('valid');
+				_return = false;
+			}
+
+			if( !_return ){
+				currentStep = 1;
+				prevStep();
+			}
+
+			return _return;
+		}
+
+	</script>
+{% endcontent %}
