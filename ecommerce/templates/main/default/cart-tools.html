@@ -1,0 +1,199 @@
+{% extends "default/base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+	<div id="cart-content" class="position-fixed h-100 w-100 d-flex" style="top: 0; z-index: 999;">
+		<div style="flex-grow: 1; background: rgba(0,0,0,0.7);">
+			PLUS
+		</div>
+		<div class="red w-100 h-100 d-flex flex-column" style="max-width: 500px; background: #B02D3A !important;">
+			<div class="white p-4">
+				<div class="d-flex justify-content-between">
+					<h4>
+						<i class="fa fa-shopping-cart text-danger"></i>
+						&nbsp;
+						Cart
+					</h4>
+					<h5 class="border-bottom border-success pb-3" style="border-width: 2px !important;">
+						3 Items (<font style="font-weight: 600;">NGN15,000</font>)
+					</h5>
+				</div>
+				<div class="d-flex justify-content-between mt-2">
+					<button class="btn teal white-text waves-effect z-depth-0" onclick="$('#cart-content').addClass('d-none'); $('body').removeClass('overflow-hidden');" style="height: 40px">
+						<i class="fa fa-arrow-left"></i>
+					</button>
+					<button class="btn btn-danger ml-auto mr-3 white-text waves-effect z-depth-0" style="height: 40px" onclick="doDelete();">
+						<i class="fa fa-trash"></i>
+					</button>
+					<button class="btn btn-success waves-effect z-depth-0" onclick="location.href = 'CHECKOUT_LINK';" style="height: 40px">
+						CHECKOUT
+					</button>
+				</div>
+			</div>
+			<div class="" style="flex-grow: 1; overflow-y: auto; overflow-x: hidden;">
+				<div class="row p-4">
+					<!-- REPETITION START -->
+
+					<div class="col-sm-6 mb-4">
+						<a href="" class="product d-block position-relative rounded z-depth white z-depth-2 hoverable">
+							<div class="box-select" onclick="event.preventDefault(); this.children[0].checked = !this.children[0].checked;">
+								<input type="checkbox" class="browser-default" style="" autocomplete="off" value="{{product_id}}" />
+								<i class="fa fa-check box-select-check"></i>
+							</div>
+							<div class="w-100 d-flex justify-content-center align-items-center border-bottom" style="height: 120px; background: ;">
+								<img src="/img/background (1).jpg" class="mw-100 mh-100" />
+							</div>
+							<div class="px-3 py-2 d-flex justify-content-between">
+								<h5 class="text-truncate">Sticker pack cedr</h5>
+								<span class="ml-3">
+									<b>N28.25</b>
+								</span>
+							</div>
+							<div class="px-3 pb-3">
+								<span>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star grey-text text-darken-3"></i>
+									(4.5K)
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 mb-4">
+						<a href="" class="product d-block position-relative rounded z-depth white z-depth-2 hoverable">
+							<div class="box-select" onclick="event.preventDefault(); this.children[0].checked = !this.children[0].checked;">
+								<input type="checkbox" class="browser-default" style="" autocomplete="off" value="{{product_id}}" />
+								<i class="fa fa-check box-select-check"></i>
+							</div>
+							<div class="w-100 d-flex justify-content-center align-items-center border-bottom" style="height: 120px; background: ;">
+								<img src="/img/background (2).jpg" class="mw-100 mh-100" />
+							</div>
+							<div class="px-3 py-2 d-flex justify-content-between">
+								<h5 class="text-truncate">Sticker pack cedr</h5>
+								<span class="ml-3">
+									<b>N28.25</b>
+								</span>
+							</div>
+							<div class="px-3 pb-3">
+								<span>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star grey-text text-darken-3"></i>
+									(4.5K)
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 mb-4">
+						<a href="" class="product d-block position-relative rounded z-depth white z-depth-2 hoverable">
+							<div class="box-select" onclick="event.preventDefault(); this.children[0].checked = !this.children[0].checked;">
+								<input type="checkbox" class="browser-default" style="" autocomplete="off" value="{{product_id}}" />
+								<i class="fa fa-check box-select-check"></i>
+							</div>
+							<div class="w-100 d-flex justify-content-center align-items-center border-bottom" style="height: 120px; background: ;">
+								<img src="/img/background (3).jpg" class="mw-100 mh-100" />
+							</div>
+							<div class="px-3 py-2 d-flex justify-content-between">
+								<h5 class="text-truncate">Sticker pack cedr</h5>
+								<span class="ml-3">
+									<b>N28.25</b>
+								</span>
+							</div>
+							<div class="px-3 pb-3">
+								<span>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star grey-text text-darken-3"></i>
+									(4.5K)
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 mb-4">
+						<a href="" class="product d-block position-relative rounded z-depth white z-depth-2 hoverable">
+							<div class="box-select" onclick="event.preventDefault(); this.children[0].checked = !this.children[0].checked;">
+								<input type="checkbox" class="browser-default" style="" autocomplete="off" value="{{product_id}}" />
+								<i class="fa fa-check box-select-check"></i>
+							</div>
+							<div class="w-100 d-flex justify-content-center align-items-center border-bottom" style="height: 120px; background: ;">
+								<img src="/img/background (4).jpg" class="mw-100 mh-100" />
+							</div>
+							<div class="px-3 py-2 d-flex justify-content-between">
+								<h5 class="text-truncate">Sticker pack cedr</h5>
+								<span class="ml-3">
+									<b>N28.25</b>
+								</span>
+							</div>
+							<div class="px-3 pb-3">
+								<span>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star yellow-text text-darken-3"></i>
+									<i class="fa fa-star grey-text text-darken-3"></i>
+									(4.5K)
+								</span>
+							</div>
+						</a>
+					</div>
+					<!-- REPETITION END -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style type="text/css">
+		a.product {
+			text-decoration: unset;
+			color: unset;
+		}
+		.box-select{
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			top: -8px; right: -8px;
+			background: rgba(0,0,0,0.8);
+			padding: 4px;
+		}
+		.box-select .box-select-check{
+			color: #f2f2f2;
+			display: none;
+		}
+		.box-select input[type=checkbox]:checked+.box-select-check{
+			display: unset;
+		}
+		#cart-content.d-none{
+			animation: slideLeft .6s ease-out;
+			-webkit-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+		@keyframes slideLeft {
+			from { transform: translateX(0); opacity: 1; }
+			50% { opacity: 0; }
+			to { transform: translateX(-100%); opacity: 0; }
+		}
+	</style>
+
+	<script type="text/javascript">
+		function doDelete(){
+			boxes = $('.box-select input[type=checkbox]:checked');
+			values = [];
+			if( boxes.length <= 0 ){
+				return;
+			}
+			boxes.each(function(i,x){
+				values.push( x.value );
+			});
+			values = values.join('::');
+			location.href = 'DELETE_LINK?i='+values;
+		}
+	</script>
+{% block content %}
